@@ -1,0 +1,131 @@
+:root{
+    --bg:#fdfdfb;
+    --card:#ffffff;
+    --border:#111;
+    --accent:#76e19a;
+    --muted:#666;
+  }
+  
+  *{ box-sizing:border-box; }
+  
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+    background: var(--bg);
+    color:#111;
+  }
+  
+  .wrap{
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+  
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom: 12px;
+  }
+  
+  .title h1{
+    margin:0;
+    font-size: 1.35rem;
+  }
+  .muted{
+    margin:2px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  
+  .pill{
+    border: 2px solid rgba(0,0,0,0.18);
+    background:#fff;
+    padding: 10px 12px;
+    border-radius: 999px;
+    cursor:pointer;
+    font-weight:800;
+  }
+  
+  .panel{
+    background: var(--card);
+    border: 2.4px solid var(--border);
+    border-radius: 12px;
+    overflow:hidden;
+    min-height: 70vh;
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .messages{
+    flex:1;
+    padding: 14px;
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+    overflow:auto;
+    background: linear-gradient(180deg, rgba(118,225,154,0.06), rgba(0,0,0,0));
+  }
+  
+  .msg{
+    border: 2px solid rgba(0,0,0,0.14);
+    background:#fff;
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+  
+  .meta{
+    display:flex;
+    gap: 10px;
+    align-items:baseline;
+    margin-bottom: 4px;
+  }
+  
+  .name{
+    font-weight: 900;
+    font-size: 0.95rem;
+  }
+  
+  .time{
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  
+  .text{
+    margin:0;
+    line-height:1.35;
+  }
+  
+  .composer{
+    display:flex;
+    gap: 10px;
+    padding: 12px 14px;
+    border-top: 2px solid rgba(0,0,0,0.12);
+    background:#fff;
+  }
+  
+  .composer input{
+    flex:1;
+    border: 2px solid rgba(0,0,0,0.18);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    outline:none;
+  }
+  
+  .composer input:focus{
+    border-color: var(--accent);
+  }
+  
+  .send{
+    border:none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor:pointer;
+    font-weight: 900;
+    background: rgba(118,225,154,0.18);
+    border: 2px solid rgba(118,225,154,0.9);
+  }
+  

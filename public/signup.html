@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asterr - Sign Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="signup.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Create Your Asterr Account</h1>
+
+    <div class="form-box">
+
+      <h2>Sign Up</h2>
+
+      <div class="birthday-block">
+        <label class="birthday-label">Birthday</label>
+
+        <div class="birthday-row">
+
+          <select id="birthMonth" required>
+            <option value="" disabled selected>Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+
+          <select id="birthDay" required>
+            <option value="" disabled selected>Day</option>
+            <!-- 1~31 자동 생성 -->
+            <script>
+              for (let i = 1; i <= 31; i++) {
+                document.write(`<option>${i}</option>`);
+              }
+            </script>
+          </select>
+
+          <select id="birthYear" required>
+            <option value="" disabled selected>Year</option>
+            <!-- 최근 년도 기준 100년 생성 -->
+            <script>
+              let yearNow = new Date().getFullYear();
+              for (let i = yearNow; i >= yearNow - 100; i--) {
+                document.write(`<option>${i}</option>`);
+              }
+            </script>
+          </select>
+
+        </div>
+      </div>
+
+      <!-- 정보 필드들 -->
+   
+      <div class="input-box">
+        <input type="email" required placeholder=" " />
+        <label>Email or Phone</label>
+      </div>
+      
+      <div class="input-box">
+        <input type="text" required placeholder=" " />
+        <label>Asterr Handle</label>
+      </div>
+      
+      <div class="input-box">
+        <input type="password" required placeholder=" " />
+        <label>Password</label>
+      </div>
+      
+      <div class="input-box">
+        <input type="text" required placeholder=" " />
+        <label>User Name</label>
+      </div>
+            
+
+      <button id="signupBtn" class="btn green">Sign Up</button>
+
+      <p class="link-text">
+        Already have an account?
+        <a href="index.html">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <footer class="asterr-footer">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Jobs</a>
+      <a href="#">Help</a>
+      <a href="#">API</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Locations</a>
+      <a href="#">Asterr Lite</a>
+      <a href="#">Threads</a>
+    </div>
+  
+    <div class="footer-bottom">
+      <select class="lang-select">
+        <option>English (US)</option>
+        <option>Español</option>
+        <option>한국어</option>
+        <option>日本語</option>
+        <option>中文</option>
+      </select>
+      <span>© 2026 Asterr</span>
+    </div>
+  </footer>
+  
+</body>
+</html>

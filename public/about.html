@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About • Asterr</title>
+  <link rel="stylesheet" href="about.css" />
+  <meta name="description" content="Asterr is a chat-first social media built for meaningful connections across time and distance." />
+</head>
+
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="index.html" aria-label="Back to Asterr">Asterr</a>
+      <nav class="top-nav">
+        <a href="index.html">Log in</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section hero reveal">
+      <div class="content">
+        <p class="kicker">Chat-first Social Media</p>
+        <h1>Asterr helps people form real connections beyond time & distance.</h1>
+        <p class="lead">
+          Asterr is a hybrid SNS built around live conversation—where anyone can create chat rooms,
+          move freely between servers, and meet people through smart recommendations.
+        </p>
+
+        <div class="hero-cards">
+          <div class="pill">Servers</div>
+          <div class="pill">Chat Rooms</div>
+          <div class="pill">Server Chat</div>
+          <div class="pill">Membership</div>
+          <div class="pill">Customization</div>
+        </div>
+      </div>
+
+      <div class="media">
+        <!-- TODO: replace src later -->
+        <img src="images/about_hero_placeholder.png" alt="Asterr preview placeholder" />
+      </div>
+    </section>
+
+    <!-- WHAT -->
+    <section class="section split reveal">
+      <div class="media">
+        <!-- TODO: replace src later -->
+        <img src="images/about_feature_placeholder.png" alt="Feature placeholder" />
+      </div>
+
+      <div class="content">
+        <h2>What is Asterr?</h2>
+        <p>
+          Asterr is a chat-centered social media experience. Instead of being built mainly around feeds,
+          Asterr encourages friendly, real-time interactions—like joining a conversation that’s already alive.
+        </p>
+
+        <div class="bullets">
+          <div class="bullet">
+            <h3>Create rooms, start conversations</h3>
+            <p>Anyone can create chat rooms and set the vibe for a community moment.</p>
+          </div>
+
+          <div class="bullet">
+            <h3>Move freely between servers</h3>
+            <p>Servers are lightweight spaces you can switch between quickly—no friction.</p>
+          </div>
+
+          <div class="bullet">
+            <h3>Meet people through strong recommendations</h3>
+            <p>Activity, participation, and interests shape what you discover next.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENT -->
+    <section class="section reveal">
+      <div class="content wide">
+        <h2>Why it’s different</h2>
+        <p class="lead">
+          Asterr’s identity is “live conversation + discovery.” It combines the best parts of chat platforms,
+          live chat culture, and community spaces into one.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Server Chat</h3>
+            <p>
+              A public, live-stream-like chat layer—fast, social, and always moving.
+              It’s designed to feel like a live crowd, not a silent feed.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Membership that changes the UI</h3>
+            <p>
+              Membership isn’t just a badge. It can affect visual experience, UI effects, and how you customize
+              your presence across servers and rooms.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Deep room customization</h3>
+            <p>
+              Chat rooms are not one-size-fits-all. Themes, identity cues, and room-level customization
+              let communities feel distinct.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Hybrid concept</h3>
+            <p>
+              Think: Discord-like rooms + live chat energy + discovery/community functions—
+              a new blend rather than a copy of one platform.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section reveal">
+      <div class="content wide">
+        <h2>Built for healthy connection</h2>
+        <div class="value-row">
+          <div class="value">
+            <h3>Respectful community</h3>
+            <p>Design choices prioritize positive interaction and sustainable social spaces.</p>
+          </div>
+          <div class="value">
+            <h3>Discovery without overwhelm</h3>
+            <p>Recommendations highlight rooms that match your interest and activity style.</p>
+          </div>
+          <div class="value">
+            <h3>Identity that feels yours</h3>
+            <p>Customization and UI effects help you express yourself without needing a “perfect profile.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta reveal">
+      <div class="content wide">
+        <h2>Ready to explore Asterr?</h2>
+        <p class="lead">Jump in, get into a server, and start conversations.</p>
+        <div class="cta-row">
+          <a class="btn" href="index.html">Log in</a>
+          <a class="btn ghost" href="signup.html">Sign up</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Asterr</span>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const items = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add("in");
+      });
+    }, { threshold: 0.12 });
+
+    items.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

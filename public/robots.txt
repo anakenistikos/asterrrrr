@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asterr.world/sitemap.xml

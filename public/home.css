@@ -1,0 +1,203 @@
+:root {
+  --sidebar-width: 260px;
+  --bg: #fdfdfb;
+  --accent: #76e19a;
+  --border: rgba(0,0,0,0.12);
+  --text-main: #111;
+  --text-muted: #666;
+  --card-bg: #ffffff;
+  --radius: 10px;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR",
+      sans-serif;
+  color: var(--text-main);
+  background: var(--bg);
+}
+
+/* LAYOUT */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  width: var(--sidebar-width);
+  border-right: 1.5px solid rgba(0,0,0,0.12);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.brand {
+  padding: 4px 8px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.nav-bottom {
+  margin-top: auto;
+}
+
+/* NAV ITEM */
+.nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.05rem;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.nav-item:hover {
+  background: #ececec;
+}
+
+.nav-item:hover .nav-icon svg {
+  stroke: #000;
+}
+
+.nav-item:hover .nav-label {
+  font-weight: 600;
+  color: #000;
+}
+
+/* NAV ICONS (SVG + EMOJI 둘 다 적용) */
+.nav-icon svg,
+.nav-icon {
+  width: 23px;
+  height: 23px;
+  font-size: 1.3rem;
+  display: block;
+  stroke-width: 2;
+}
+
+.nav-label {
+  font-size: 1.05rem;
+}
+
+/* ====== MAIN ====== */
+.main {
+  flex: 1;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.main-subtitle {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* ====== ROOM LIST ====== */
+.room-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ROOM CARD */
+.room-card {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 2.4px solid #ddd;
+  background: var(--card-bg);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.room-card--locked {
+  background: #fffef9;
+}
+
+.room-left {
+  display: flex;
+  justify-content: center;
+}
+
+.room-lock {
+  font-size: 1.4rem;
+}
+
+.room-center {
+  padding: 0 8px;
+}
+
+.room-title {
+  margin: 0;
+  font-size: 1.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.room-right {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  padding-left: 8px;
+  white-space: nowrap;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1.5px solid rgba(0,0,0,0.12);
+    gap: 12px;
+  }
+
+  .nav,
+  .nav-bottom {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .nav-item {
+    padding: 8px 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .main {
+    padding: 16px;
+  }
+}

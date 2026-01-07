@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asterr - Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="login.js" defer></script>
+  <meta name="google-site-verification" content="-AijPranVWtx0KE4TgGhSfQDgO9GMgxBP7pYPw2LSlo" />
+</head>
+
+<body class="white-bg">
+  <main class="root">
+    <section class="login-screen">
+
+      <div class="big-logo">
+        <!-- 여긴 비워두기 (나중에 요소 추가 가능) -->
+      </div>
+
+      <!-- 오른쪽 로그인 영역 -->
+      <div class="login-area">
+
+        <div class="logo-center">
+          <img src="images/Asterr_bg 수정본.png" alt="Asterr logo">
+        </div>
+
+        <!-- 로그인 카드 -->
+        <form id="loginForm" class="card">
+
+          <h1 class="welcome">Welcome to Asterr</h1>
+
+          <div class="input-box">
+            <input id="loginHandle" type="text" required placeholder=" "/>
+            <label>Asterr Handle</label>
+          </div>
+          
+          <div class="input-box">
+            <input id="password" type="password" required placeholder=" "/>
+            <label>Password</label>
+          </div>          
+
+          <div class="actions">
+            <button id="loginBtn" class="btn green" type="submit">Log in</button>
+          </div>
+
+          <a class="link" href="#" id="forgot">Forgot the password?</a>
+
+          <div class="signup">
+            Don’t have an account? <a href="signup.html">Sign up</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="asterr-footer">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Jobs</a>
+      <a href="#">Help</a>
+      <a href="#">API</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Locations</a>
+      <a href="#">Asterr Lite</a>
+      <a href="#">Threads</a>
+    </div>
+  
+    <div class="footer-bottom">
+      <select class="lang-select">
+        <option>English (US)</option>
+        <option>Español</option>
+        <option>한국어</option>
+        <option>日本語</option>
+        <option>中文</option>
+      </select>
+      <span>© 2026 Asterr</span>
+    </div>
+  </footer>
+  
+</body>
+</html>

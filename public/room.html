@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asterr - Room</title>
+  <link rel="stylesheet" href="room.css" />
+  <script type="module" src="room.js" defer></script>
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <button id="backBtn" class="pill" type="button">← Back</button>
+      <div class="title">
+        <h1 id="roomTitle">Room</h1>
+        <p id="roomMeta" class="muted">Loading…</p>
+      </div>
+      <button id="logoutBtn" class="pill" type="button">Logout</button>
+    </header>
+
+    <section class="panel">
+      <div id="messages" class="messages" role="log" aria-live="polite"></div>
+
+      <form id="msgForm" class="composer" autocomplete="off">
+        <input id="msgInput" type="text" maxlength="240" placeholder="Type a message…" />
+        <button class="send" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
